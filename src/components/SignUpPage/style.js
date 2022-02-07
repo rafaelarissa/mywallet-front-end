@@ -9,16 +9,25 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: #8C11BE;
+
+  h1{
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 32px;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+  }
 `;
 
 const StyledLink = styled(Link)`
   height: 40px;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #52B6FF;
+  color: #FFFFFF;
+  text-decoration: none
 `;
 
 export {

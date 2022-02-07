@@ -3,11 +3,10 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router';
 import Button from '../Button';
 import Input from '../Input';
-import Logo from '../Logo.png';
-import Loader from "react-loader-spinner";
-import TokenContext from '../../contexts/TokenContext';
+// import Loader from "react-loader-spinner";
+// import TokenContext from '../../contexts/TokenContext';
 import { Container, StyledLink } from './style';
-import UserContext from '../../contexts/UserContext';
+// import UserContext from '../../contexts/UserContext';
 
 function LoginPage() {
      const [email, setEmail] = useState('');
@@ -15,8 +14,8 @@ function LoginPage() {
      const [isLoading, setIsLoading] = useState(false);
      const navigate = useNavigate();
 
-     const { setAndPersistUser } = useContext(UserContext)
-     const { setAndPersistToken } = useContext(TokenContext);
+     // const { setAndPersistUser } = useContext(UserContext)
+     // const { setAndPersistToken } = useContext(TokenContext);
 
      function handleLogin(e) {
           e.preventDefault();
@@ -30,9 +29,9 @@ function LoginPage() {
 
           promise.then(response => {
                // setToken(response.data.token)
-               setAndPersistUser(response.data.image)
+               // setAndPersistUser(response.data.image)
                setIsLoading(false);
-               setAndPersistToken(response.data.token);
+               // setAndPersistToken(response.data.token);
                navigate('/hoje')
           });
 
@@ -44,15 +43,16 @@ function LoginPage() {
 
      return (
           <Container>
-               <img src={Logo} alt="Logo Principal" />
+               <h1>My Wallet</h1>
                <form onSubmit={handleLogin}>
-                    <Input type="email" value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} disabled={isLoading} />
-                    <Input type="password" value={password} placeholder="senha" onChange={(e) => setPassword(e.target.value)} disabled={isLoading} />
+                    <Input type="email" value={email} placeholder="E-mail" onChange={(e) => setEmail(e.target.value)} disabled={isLoading} />
+                    <Input type="password" value={password} placeholder="Senha" onChange={(e) => setPassword(e.target.value)} disabled={isLoading} />
                     <Button type="submit" disabled={isLoading}>
-                         {isLoading ? <Loader type="ThreeDots" color="#FFFFFF" height={50} width={50} /> : "Entrar"}
+                         {/* {isLoading ? <Loader type="ThreeDots" color="#FFFFFF" height={50} width={50} /> : "Entrar"} */}
+                         Entrar
                     </Button>
                </form>
-               <StyledLink to="/cadastro">Não tem uma conta? Cadastre-se!</StyledLink>
+               <StyledLink to="/cadastro">Primeira vez? Cadastre-se!</StyledLink>
           </Container>
      );
 }
