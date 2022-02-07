@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import LoginPage from "./components/LoginPage";
 import SignUpPage from "./components/SignUpPage";
+import HomePage from "./components/HomePage";
 // import TokenContext from "./contexts/TokenContext";
 // import UserContext from "./contexts/UserContext";
 
@@ -27,10 +28,9 @@ export default function App() {
                  <BrowserRouter>
                       <Routes>
                            <Route path="/" element={<LoginPage />} />
-                           <Route path="/cadastro" element={<SignUpPage />} />
-                           {/* <Route path="/habitos" element={<HabitsPage />} />
-                           <Route path="/hoje" element={<TodayPage />} />
-                           <Route path="/historico" element={<HistoryPage />} /> */}
+                           <Route path="/sign-up" element={<SignUpPage />} />
+                           <Route path="/home" element={<HomePage />} />
+                           
                       </Routes>
                  </BrowserRouter>
      //        </UserContext.Provider>

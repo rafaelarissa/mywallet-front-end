@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
-  min-height: 100vh;
   width: 100%;
+  height: 100%;
   padding: 36px;
   display: flex;
   justify-content: center;

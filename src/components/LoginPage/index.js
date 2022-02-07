@@ -52,7 +52,7 @@ function LoginPage() {
                          Entrar
                     </Button>
                </form>
-               <StyledLink to="/cadastro">Primeira vez? Cadastre-se!</StyledLink>
+               <StyledLink to="/sign-up">Primeira vez? Cadastre-se!</StyledLink>
           </Container>
      );
 }
