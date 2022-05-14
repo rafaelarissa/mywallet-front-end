@@ -21,7 +21,7 @@ function SignUpPage() {
      function handleSignUp(e) {
           e.preventDefault();
 
-          const promise = axios.post(`https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/sign-up`, {
+          const promise = axios.post(`http://localhost:5000/sign-up`, {
                email,
                password,
                name,
