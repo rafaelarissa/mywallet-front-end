@@ -12,6 +12,7 @@ import { Container, StyledLink } from './style';
 function SignUpPage() {
      const [email, setEmail] = useState('');
      const [password, setPassword] = useState('');
+     const [checkPassword, setCheckPassword] = useState('');
      const [name, setName] = useState('');
      const [isLoading, setIsLoading] = useState(false);
      // const { image, setAndPersistUser } = useContext(UserContext);
@@ -46,7 +47,7 @@ function SignUpPage() {
                     <Input type="name" value={name} placeholder="Nome" onChange={(e) => setName(e.target.value)} disabled={isLoading} />
                     <Input type="email" value={email} placeholder="E-mail" onChange={(e) => setEmail(e.target.value)} disabled={isLoading} />
                     <Input type="password" value={password} placeholder="Senha" onChange={(e) => setPassword(e.target.value)} disabled={isLoading} />
-                    <Input type="password" value={password} placeholder="Confirme sua senha" onChange={(e) => setPassword(e.target.value)} disabled={isLoading} />
+                    <Input type="password" value={checkPassword} placeholder="Confirme sua senha" onChange={(e) => setCheckPassword(e.target.value)} disabled={isLoading} />
                     <Button type="submit" disabled={isLoading}>
                          {/* {isLoading ? <Loader type="ThreeDots" color="#FFFFFF" height={50} width={50} /> : "Cadastrar"} */}
                          Cadastrar
